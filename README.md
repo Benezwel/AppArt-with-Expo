@@ -1,8 +1,8 @@
-# Welcome to your Expo app 👋
+# Welcome to My First Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+## How i will proceed
 
 1. Install dependencies
 
