@@ -9,7 +9,10 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>
+        <h1> Artvant-Garde</h1>
+
+        </Text>
     </View>
   );
 }
