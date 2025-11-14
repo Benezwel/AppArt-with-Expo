@@ -10,7 +10,7 @@ export default function Index() {
       }}
     >
       <Text>
-        <h1> Artvant-Garde</h1>
+        <h1> Daily</h1>
 
         </Text>
     </View>

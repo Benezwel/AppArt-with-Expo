@@ -10,7 +10,7 @@ export default function Index() {
       }}
     >
       <Text>
-        <h1> Apprentissage</h1>
+        <h1>Artiste</h1>
 
         </Text>
     </View>
