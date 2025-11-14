@@ -11,8 +11,7 @@ export default function TabLayout() {
      options={{
       title: 'Home',
       tabBarIcon: ({color}) => < MaterialIcons size={28} />,
-     
-    }}
+    }} 
      />
   </Tabs>
 }
