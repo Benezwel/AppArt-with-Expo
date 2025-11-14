@@ -6,7 +6,7 @@ export default function TabLayout() {
     <Tabs>  
       <Tabs.Screen name="index" 
       options={{
-        title: "",
+        title: "HOME",
         tabBarIcon: ({color}) => <MaterialIcons size={28} />
         }} />
        </Tabs>
