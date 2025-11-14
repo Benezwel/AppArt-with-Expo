@@ -4,8 +4,8 @@ export default function Home (){
 return (
     <View
       style={{
-        flex: 1,
-        justifyContent: "center",
+        flex: 2,
+        justifyContent: "space-around",
         alignItems: "center",
       }}
     >
