@@ -1,9 +1,14 @@
-import { Stack } from "expo-router";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { Tabs } from "expo-router";
 
-export default function StackLayout() {
+export default function TabLayout() {
   return (
-    <Stack>  
-      <Stack.Screen name="hometest" options={{headerShown: true}} />
-       </Stack>
+    <Tabs>  
+      <Tabs.Screen name="index" 
+      options={{
+        title: "test",
+        tabBarIcon: ({color}) => <MaterialIcons size={28} />
+        }} />
+       </Tabs>
   )
 }
