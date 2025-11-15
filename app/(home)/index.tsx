@@ -10,7 +10,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Link href="/[Apprentissage]" > 
+      <Link href="/[Apprentissage]" asChild> 
       <Pressable> 
          <Text>Artist</Text> 
       </Pressable>
