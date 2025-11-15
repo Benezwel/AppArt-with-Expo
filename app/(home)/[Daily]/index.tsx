@@ -9,8 +9,10 @@ export default function Index() {
         alignItems: "center",
       }}
     >
+   
       <Text>
         <h1> Daily</h1>
+        
 
         </Text>
     </View>
