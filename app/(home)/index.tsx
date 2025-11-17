@@ -7,26 +7,25 @@ export default function Index() {
   return (
     <View
       style={{
-        flex: 1,
+        flex: 12,
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Link href="/[Apprentissage]" asChild> 
+      <Link href="/[Apprentissage]" > 
       <Pressable> 
          <Text>Apprentissage</Text> 
       </Pressable>
-     
-     </Link>
+      </Link>
 
-     <Button title="DaDaisme" onPress={() =>  router.navigate('/[Apprentissage]/Artist')}/>
-      <Link href= "/[Daily]">
-    <Pressable>
-    <Text>
-      Daily
-    </Text>
-      </Pressable> 
-     </Link>
+     <Button title="DaDaisme" onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
+    
+      
+      {/*   Weird Pourquoi mes dossier son undefined et lorsque je met like il me dit  */}
+       
+      <Button title = "Daily" onPress={() => router.navigate('../[Daily]')} />
+
+
       <Text>
         <h1> HOME </h1>
 
