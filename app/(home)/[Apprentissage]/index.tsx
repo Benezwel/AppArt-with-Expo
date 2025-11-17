@@ -16,7 +16,7 @@ export default function Index() {
         </Text>
       
       <Button title=" Daily"
-        onPress={()=> router.navigate("../[Daily]")}/>
+        onPress={()=> router.navigate("../[Daily]/second")}/>
     </View>
   );
 }

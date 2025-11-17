@@ -19,15 +19,12 @@ export default function Index() {
       </Pressable>
       </Link>
 
-     <Button title="DaDaisme"  onPress={() =>  router.navigate('/[Apprentissage]/Artist')}/>
+     <Button title="DaDaisme"  onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
    
     
     {/* Essayer de mettre plusieur Link dans la default Route */}
 
-    <Link href= "/[Daily]">
-    Daily
-    </Link>
-
+   <Button title="Daily" onPress={() => router.navigate("/[Daily]/second")} />
     <Text>
       <h1> HOME </h1>
     </Text>
