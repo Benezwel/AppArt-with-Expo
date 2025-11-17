@@ -18,7 +18,7 @@ export default function Index() {
   
       <Button 
         title=" return back"
-        onPress={() => router.push('/[Apprentissage]')} />
+        onPress={() => router.push('/')} />
 
       <Text>
         <h1>Artiste</h1>

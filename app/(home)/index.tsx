@@ -12,15 +12,17 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Link href="/[Apprentissage]" > 
+      <Link href="/[Apprentissage]" push asChild > 
       <Pressable> 
          <Text>Apprentissage</Text> 
       </Pressable>
-      
-      
       </Link>
 
-     <Button title="DaDaisme" onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
+     <Button title="DaDaisme"  onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
+     <Button title="Daily"  onPress={() =>  router.navigate('../[Daily]')}/>    
+    <Link href= "./[Daily]/">
+    Daily
+    </Link>
 
       <Text>
         <h1> HOME </h1>
