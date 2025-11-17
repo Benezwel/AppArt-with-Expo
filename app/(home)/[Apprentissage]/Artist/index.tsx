@@ -1,7 +1,9 @@
-import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { Link, useRouter } from "expo-router";
+import { Button, Text, View } from "react-native";
+
 
 export default function Index() {
+  const router = useRouter();
   return (
     <View
       style={{
@@ -11,7 +13,13 @@ export default function Index() {
       }}
     >
       <Link 
-      href="/artists.tsx"> Artist </Link>
+      href="/artists.tsx"> Artist 
+      </Link>
+  
+      <Button 
+        title=" return back"
+        onPress={() => router.push('..')} />
+
       <Text>
         <h1>Artiste</h1>
 
