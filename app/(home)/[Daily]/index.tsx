@@ -12,8 +12,6 @@ export default function Index() {
    
       <Text>
         <h1> Daily</h1>
-        
-
         </Text>
     </View>
   );

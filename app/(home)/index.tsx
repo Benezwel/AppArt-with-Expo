@@ -10,24 +10,29 @@ export default function Index() {
         flex: 12,
         justifyContent: "center",
         alignItems: "center",
-      }}
-    >
+      }}>
+
+
       <Link href="/[Apprentissage]" push asChild > 
       <Pressable> 
          <Text>Apprentissage</Text> 
       </Pressable>
       </Link>
 
-     <Button title="DaDaisme"  onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
-     <Button title="Daily"  onPress={() =>  router.navigate('../[Daily]')}/>    
-    <Link href= "./[Daily]/">
+     <Button title="DaDaisme"  onPress={() =>  router.navigate('/[Apprentissage]/Artist')}/>
+   
+    
+    {/* Essayer de mettre plusieur Link dans la default Route */}
+
+    <Link href= "/[Daily]">
     Daily
     </Link>
 
-      <Text>
-        <h1> HOME </h1>
-
-        </Text>
+    <Text>
+      <h1> HOME </h1>
+    </Text>
+    
+    
     </View>
   );
 }
