@@ -14,8 +14,9 @@ export default function Index() {
     >
       <Link href="/[Apprentissage]" asChild> 
       <Pressable> 
-         <Text>Artist</Text> 
+         <Text>Apprentissage</Text> 
       </Pressable>
+     
      </Link>
 
      <Button title="DaDaisme" onPress={() =>  router.navigate('/[Apprentissage]/Artist')}/>
