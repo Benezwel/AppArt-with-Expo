@@ -16,15 +16,11 @@ export default function Index() {
       <Pressable> 
          <Text>Apprentissage</Text> 
       </Pressable>
+      
+      
       </Link>
 
      <Button title="DaDaisme" onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
-    
-      
-      {/*   Weird Pourquoi mes dossier son undefined et lorsque je met like il me dit  */}
-       
-      <Button title = "Daily" onPress={() => router.navigate('../[Daily]')} />
-
 
       <Text>
         <h1> HOME </h1>
