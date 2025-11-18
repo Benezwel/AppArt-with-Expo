@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from "expo-router";
-import { Text, View } from "react-native";
+import { Text, View, } from "react-native";
 
 export default function QueryTest(){
     const { id, limite} = useLocalSearchParams();
@@ -17,6 +17,7 @@ export default function QueryTest(){
             </Text>
             <Text>User id: {id}</Text>
             <Text>Limit: {limite}</Text>
+
             
             
         </View>
