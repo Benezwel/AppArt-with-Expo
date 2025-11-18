@@ -13,7 +13,7 @@ export default function QueryTest(){
             alignItems: "center",
         }}>
             <Text>
-               <h1>Test Query </h1> 
+               <h1>Marcel Duchamp</h1> 
             </Text>
             <Text>User id: {id}</Text>
             <Text>Limit: {limite}</Text>
