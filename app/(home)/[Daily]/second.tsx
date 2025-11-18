@@ -1,6 +1,7 @@
 import { useRouter } from "expo-router";
 import { Button, Text, View } from "react-native";
 
+
 export default function Index() {
   const router = useRouter();
   return (
@@ -18,6 +19,8 @@ export default function Index() {
         <Button 
         title="Profile"
         onPress={() => router.navigate('/[Profile]/third')} />
+
+
     </View>
   );
 }
