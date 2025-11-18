@@ -1,6 +1,8 @@
-import { Text, View } from "react-native";
+import { useRouter } from "expo-router";
+import { Button, Text, View } from "react-native";
 
 export default function Index() {
+  const router = useRouter();
   return (
     <View
       style={{
@@ -13,6 +15,9 @@ export default function Index() {
       <Text>
         <h1> Daily</h1>
         </Text>
+        <Button 
+        title="Profile"
+        onPress={() => router.navigate('/[Profile]/third')} />
     </View>
   );
 }

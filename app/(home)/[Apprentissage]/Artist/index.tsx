@@ -18,7 +18,7 @@ export default function Index() {
   
       <Button 
         title=" return back"
-        onPress={() => router.push('/')} />
+        onPress={() => router.push('/[Daily]/second')} />
 
       <Text>
         <h1>Artiste</h1>
