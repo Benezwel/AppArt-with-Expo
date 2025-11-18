@@ -24,6 +24,8 @@ export default function Index() {
 
       <Link href="/[Daily]/artiste?limite=20"> QueryTest</Link>
 
+      
+
     </View>
   );
 }
