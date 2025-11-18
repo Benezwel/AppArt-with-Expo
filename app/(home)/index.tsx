@@ -29,6 +29,12 @@ export default function Index() {
       <h1> HOME </h1>
     </Text>
     
+    <Link href={{
+      pathname: "/[Profile]/third",
+      params:  { Profile : 'profile'}
+    }}> 
+    <Button title="Profile"/>
+    </Link>
     
     </View>
   );
