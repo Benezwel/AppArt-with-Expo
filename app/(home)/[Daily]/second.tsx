@@ -22,7 +22,7 @@ export default function Index() {
         title="Profile"
         onPress={() => router.navigate('/[Profile]/third')} />
 
-      <Link href="/[Daily]/artiste?limite=20"> QueryTest</Link>
+      <Link href="/[Daily]/artiste?limite=20" withAnchor> QueryTest</Link>
 
       
 
