@@ -26,7 +26,7 @@ export default function Index() {
 
    <Button title="Daily" onPress={() => router.navigate("/[Daily]/second")} />
     <Text>
-      <h1> HOME </h1>
+       HOME 
     </Text>
     
     <Link href={{
