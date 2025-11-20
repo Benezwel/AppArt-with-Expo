@@ -1,8 +1,10 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from "expo-router";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function TabLayout() {
   return (
+    <SafeAreaView> 
     <Tabs
     screenOptions={ {
     tabBarActiveBackgroundColor: 'blue',}}
@@ -21,5 +23,6 @@ export default function TabLayout() {
         
         
        </Tabs>  
+       </SafeAreaView>
   )
 }
