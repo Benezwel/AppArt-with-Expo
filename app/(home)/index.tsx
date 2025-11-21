@@ -22,8 +22,8 @@ export default function Index() {
     {/* Essayer de mettre plusieur Link dans la default Route */}
 
    <Button title="Daily" onPress={() => router.navigate("/[Daily]/second")} />
-    <Text>
-       HOME 
+    <Text style={styles.text}>
+       <H1>Home</H1> 
     </Text>
     
     <Link href={{
@@ -44,6 +44,6 @@ export default function Index() {
     justifyContent: 'center', 
   },
   text: {
-    color: ''
+    color: '#FFFFFF'
   }
  })
