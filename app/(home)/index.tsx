@@ -1,21 +1,18 @@
+import { H1 } from "@expo/html-elements";
 import { Link, useRouter } from "expo-router";
-import { Button, Pressable, Text, View } from "react-native";
+import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   
   const router = useRouter();
   return (
     <View
-      style={{
-        flex: 12,
-        justifyContent: "center",
-        alignItems: "center",
-      }}>
+      style= {styles.container}>
 
 
       <Link href="/[Apprentissage]" push asChild > 
       <Pressable> 
-         <Text>Apprentissage</Text> 
+         <Text style={styles.text}> <H1>Apprentissage </H1></Text> 
       </Pressable>
       </Link>
 
@@ -39,3 +36,14 @@ export default function Index() {
     </View>
   );
 }
+ const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    backgroundColor:  '#382B1B',
+    alignItems: 'center',
+    justifyContent: 'center', 
+  },
+  text: {
+    color: ''
+  }
+ })
