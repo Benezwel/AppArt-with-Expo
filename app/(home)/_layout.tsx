@@ -1,12 +1,13 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Tabs } from "expo-router";
+
 export default function TabLayout() {
   return (
     
     <Tabs
-    screenOptions={ {
-    tabBarActiveBackgroundColor: 'blue',}}
+    // screenOptions={ {
+    // tabBarActiveBackgroundColor: 'blue',}}
     >  
 
 
