@@ -6,13 +6,14 @@ import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 export default function Index() {
   
   const router = useRouter(); 
+  const DuchampImage = require('@/assets/images/lol.avif')
   return (
     <View
       style= {styles.container}>
 
       <Image 
       style={styles.Image}
-      source={require('././assets/images/39d8940597ecad546d7feadd482ff317ca6b4b48-3000x2058.avif')}/>
+      source={DuchampImage}/>
       <Link href="/[Apprentissage]" push asChild > 
       <Pressable> 
          <Text style={styles.text}> <H1>Apprentissage </H1></Text> 
