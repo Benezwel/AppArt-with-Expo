@@ -1,7 +1,7 @@
 import { H1 } from "@expo/html-elements";
 import { Image } from "expo-image";
 import { Link, useRouter } from "expo-router";
-import { Button, Pressable, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   
@@ -14,11 +14,6 @@ export default function Index() {
       <Image 
       style={styles.Image}
       source={DuchampImage}/>
-      <Link href="/[Apprentissage]" push asChild > 
-      <Pressable> 
-         <Text style={styles.text}> <H1>Apprentissage </H1></Text> 
-      </Pressable>
-      </Link>
 
      <Button title="DaDaisme"  onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
    
@@ -57,4 +52,3 @@ export default function Index() {
   }
  })
 
- console.log()
