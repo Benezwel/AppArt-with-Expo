@@ -1,5 +1,5 @@
 import { useRouter } from "expo-router";
-import { Button, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 
 export default function Index() {
@@ -14,9 +14,9 @@ export default function Index() {
     >
     
   
-      <Button 
+      {/* <Button 
         title=" return back"
-        onPress={() => router.push('./[Daily]/second')} />
+        onPress={() => router.push('./[Daily]/second')} /> */}
 
       <Text>
         <h1>Artiste</h1>
