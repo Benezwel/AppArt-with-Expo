@@ -22,9 +22,9 @@ export default function TabLayout() {
           )
         }} />
 
-        <Tabs.Screen name="[Daily]" options={{ title: "Daily"}} />
+        <Tabs.Screen name="Daily" options={{ title: "Daily"}} />
         
-        <Tabs.Screen name="[Profile]" options={{ title: "Profile"}} />
+        <Tabs.Screen name="Profile" options={{ title: "Profile"}} />
         
         
        </Tabs>  

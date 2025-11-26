@@ -20,9 +20,9 @@ export default function Index() {
         </Text>
         <Button 
         title="Profile"
-        onPress={() => router.navigate('/[Profile]/third')} />
+        onPress={() => router.navigate('./Profile/third')} />
 
-      <Link href="/[Daily]/marcelDuchamp?limite=20" withAnchor> QueryTest</Link>
+      <Link href="./Daily/marcelDuchamp?limite=20" withAnchor> QueryTest</Link>
 
       
 
