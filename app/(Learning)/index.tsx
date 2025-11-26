@@ -20,13 +20,13 @@ export default function Index() {
     
     {/* Essayer de mettre plusieur Link dans la default Route */}
 
-   <Button title="Daily" onPress={() => router.navigate("/[Daily]/second")} />
+   <Button title="Daily" onPress={() => router.navigate("./[Daily]/second")} />
     <Text style={styles.text}>
        <H1>Home</H1> 
     </Text>
     
     <Link href={{
-      pathname: "/[Profile]/third",
+      pathname: "./[Profile]/third",
       params:  { Profile : 'profile'}
     }}> 
     <Button title="Profile"/>
