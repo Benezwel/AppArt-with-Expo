@@ -11,15 +11,26 @@ export default function TabLayout() {
   return (
     
     <Tabs
-    // screenOptions={ {
-    // tabBarActiveBackgroundColor: 'blue',}}
+   screenOptions={
+    {tabBarActiveTintColor: '#1F1B17',
+      headerStyle: {
+        backgroundColor: '#1F1B17',
+      },
+      headerShadowVisible: false,
+      headerTintColor: "#fff",
+      tabBarStyle: {
+        backgroundColor: '#fff'
+      }
+    }
+   }
     >  
 
 
       <Tabs.Screen name="(Learning)" 
       options={{
-        tabBarIcon: ({color}) => <Entypo size={28} name='book' color={color} />
-        }} />
+        tabBarIcon: ({color}) => <Entypo size={28} name='book'  color={color} />
+        }} 
+        />
 
         <Tabs.Screen name="Discovery" 
         options={{ 
