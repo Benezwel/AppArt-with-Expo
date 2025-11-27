@@ -19,7 +19,8 @@ export default function TabLayout() {
       headerShadowVisible: false,
       headerTintColor: "#fff",
       tabBarStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#1F1B17',
+        
       }
     }
    }
@@ -28,28 +29,28 @@ export default function TabLayout() {
 
       <Tabs.Screen name="(Learning)" 
       options={{
-        tabBarIcon: ({color}) => <Entypo size={28} name='book'  color={color} />
+        tabBarIcon: ({color}) => <Entypo size={28} name='book'  color={"white"} />
         }} 
         />
 
         <Tabs.Screen name="Discovery" 
         options={{ 
           tabBarIcon: ({ color, focused}) => (
-            <MaterialCommunityIcons name='artboard' color={color} size={24} />
+            <MaterialCommunityIcons name='artboard' color={"white"} size={24} />
           )
         }} />
 
         <Tabs.Screen name="Daily" 
         options={{
           tabBarIcon: ({color}) => (
-            <AntDesign name="bulb" color={color} size={24} />
+            <AntDesign name="bulb" color={"white"} size={24} />
           )
         }} />
       
         
         <Tabs.Screen name="Profile" options={{
           tabBarIcon: ({color}) => (
-            <FontAwesome name='user' color={color} size={24} />
+            <FontAwesome name='user' color={"white"} size={24} />
           )
         }} />
         
