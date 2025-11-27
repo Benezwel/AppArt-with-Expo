@@ -1,5 +1,7 @@
+import AntDesign from '@expo/vector-icons/AntDesign';
 import Entypo from '@expo/vector-icons/Entypo';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+
 
 import { Tabs } from "expo-router";
 
@@ -23,7 +25,12 @@ export default function TabLayout() {
           )
         }} />
 
-        <Tabs.Screen name="Daily" options={{ title: "Daily"}} />
+        <Tabs.Screen name="Daily" 
+        options={{
+          tabBarIcon: ({color}) => (
+            <AntDesign name="bulb" color={color} size={24} />
+          )
+        }} />
       
         
         <Tabs.Screen name="Profile" options={{ title: "Profile"}} />
