@@ -19,7 +19,7 @@ export default function Index() {
         onPress={() => router.push('./[Daily]/second')} /> */}
 
       <Text>
-        <h1>Artiste</h1>
+        <h1>Mouvement</h1>
 
         </Text>
     </View>

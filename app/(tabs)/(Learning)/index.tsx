@@ -15,7 +15,7 @@ export default function Index() {
       style={styles.Image}
       source={DuchampImage}/>
 
-     <Button title="DaDaisme"  onPress={() =>  router.navigate('./[Apprentissage]/Artist')}/>
+     <Button title="DaDaisme"  onPress={() =>  router.navigate('/Mouvement')}/>
    
     
     {/* Essayer de mettre plusieur Link dans la default Route */}
