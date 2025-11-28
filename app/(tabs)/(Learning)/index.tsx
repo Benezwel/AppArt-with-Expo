@@ -11,7 +11,7 @@ export default function Index() {
       style= {styles.container}>
       
 
-     <Button title="DaDaisme"  onPress={() =>  router.navigate('/Mouvement')}/>
+     <Button title="DaDaisme"  onPress={() =>  router.navigate('/1Mouvement')}/>
    
     
     {/* Essayer de mettre plusieur Link dans la default Route */}

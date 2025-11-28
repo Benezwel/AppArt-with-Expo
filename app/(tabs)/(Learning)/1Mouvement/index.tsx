@@ -1,3 +1,4 @@
+import { H1 } from "@expo/html-elements";
 import { useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
@@ -19,7 +20,7 @@ export default function Index() {
         onPress={() => router.push('./[Daily]/second')} /> */}
 
       <Text>
-        <h1>Mouvement</h1>
+        <H1>Mouvement</H1>
 
         </Text>
     </View>
