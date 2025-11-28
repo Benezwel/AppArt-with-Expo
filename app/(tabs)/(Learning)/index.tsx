@@ -1,13 +1,15 @@
 import { Link, useRouter } from "expo-router";
 import { Button, StyleSheet, View } from "react-native";
 
+
 export default function Index() {
   
   const router = useRouter(); 
+  const PlaceHolder = require("@/assets/images/lol.avif");
   return (
     <View
       style= {styles.container}>
-
+      
 
      <Button title="DaDaisme"  onPress={() =>  router.navigate('/Mouvement')}/>
    
