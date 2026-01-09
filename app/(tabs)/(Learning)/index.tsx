@@ -17,6 +17,7 @@ export default function Index() {
    
     <View style={styles.ImageContainer}> 
     <Text>
+      <marquee>test </marquee>
     <H1> Artistic Mouvement </H1>
     </Text>
     </View>
