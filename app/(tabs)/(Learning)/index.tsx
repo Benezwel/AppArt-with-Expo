@@ -1,6 +1,8 @@
 import { H1 } from "@expo/html-elements";
 import { Link, useRouter } from "expo-router";
+import Marquee from "react-fast-marquee";
 import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
+
 
 
 
@@ -17,7 +19,7 @@ export default function Index() {
    
     <View style={styles.ImageContainer}> 
     <Text>
-      <marquee>test </marquee>
+    <Marquee> test</Marquee>     
     <H1> Artistic Mouvement </H1>
     </Text>
     </View>
