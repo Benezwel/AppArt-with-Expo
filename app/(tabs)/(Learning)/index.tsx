@@ -1,7 +1,6 @@
 import { H1 } from "@expo/html-elements";
 import { Link, useRouter } from "expo-router";
-import Marquee from "react-fast-marquee";
-import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Button, Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 
 
@@ -13,24 +12,24 @@ export default function Index() {
   const PlaceHolder = require("@/assets/images/lol.avif");
   return (
      <ScrollView>
-    <View style= {[styles.container,{ flexDirection: 'column'} ] }>
+    <View style= {{
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "flex-start"
+    }}> 
       
      {/* <Button title="DaDaisme"  onPress={() =>  router.navigate('/1Mouvement')}/> */}
-   
+   <Image source={{
+    uri:"https://i.pinimg.com/736x/03/7b/31/037b3189716898809199b789208ee922.jpg"}}  />
+    
     <View style={styles.ImageContainer}> 
-    <Text>
-    <Marquee> test</Marquee>     
+    <Text>   
     <H1> Artistic Mouvement </H1>
     </Text>
     </View>
-
-    {/* <View style={{flex: 1, backgroundColor: 'red'}} />
-
-    <View style={{flex: 2, backgroundColor: '#8B1E1E'}} />
-
-    <View style={{flex: 3, backgroundColor: 'blue'}} /> */}
-
-    {/* Essayer de mettre plusieur Link dans la default Route */}
+    <Text style={{
+      alignItems: "center", 
+    }}> Try to learn</Text>
 
   
     
