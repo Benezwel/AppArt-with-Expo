@@ -23,6 +23,7 @@ export default function Index() {
   return (
      <ScrollView>
     <View>
+      
       <Text>{name}</Text>
    <Image source={{
     
