@@ -67,12 +67,12 @@ export default function Index() {
 
   
     <Cat name="Mama"/>
-    <Cat name="pOPI"/>
     
     {/* <Link href={{ 
       pathname: "./[Profile]/third",
       params:  { Profile : 'profile'}
     }}>  */}
+    <Cat name="pOPI"/>
 
     {/* <Button title="Profile"/>
     </Link> */}
