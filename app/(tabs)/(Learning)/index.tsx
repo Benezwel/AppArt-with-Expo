@@ -1,5 +1,6 @@
 import { H1 } from "@expo/html-elements";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
+import { useState } from "react";
 import { Button, Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 
@@ -15,6 +16,30 @@ export default function Index() {
       </View>
     )
   };
+
+// typescript give a type to the props
+  type caProps = {
+    name: string
+  };
+
+  function Cat(props: caProps){
+    const [isHungry, setIsHungry] = useState(true);
+    return (
+      <View>
+        <Text >
+          I'am {props.name}, and I am {isHungry ? "hungry" : "full"}!
+        </Text>
+        
+        <Button
+        onPress={() => {
+          setIsHungry(false);
+        }}
+        disabled={!isHungry}
+        title={isHungry ? "Give me  some food, please!" : "thanks"} />
+
+      </View>
+    )
+  }
   const router = useRouter(); 
   const PlaceHolder = require("@/assets/images/lol.avif");
   const name = "ArtVanGarde"
@@ -41,14 +66,16 @@ export default function Index() {
     }}> Try to learn</Text>
 
   
+    <Cat name="Mama"/>
+    <Cat name="pOPI"/>
     
-    <Link href={{ 
+    {/* <Link href={{ 
       pathname: "./[Profile]/third",
       params:  { Profile : 'profile'}
-    }}> 
-    
-    <Button title="Profile"/>
-    </Link>
+    }}>  */}
+
+    {/* <Button title="Profile"/>
+    </Link> */}
     
     </View>
     </ScrollView>
