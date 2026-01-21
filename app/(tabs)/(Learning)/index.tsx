@@ -13,7 +13,7 @@ export default function Index() {
   // on peut creer ses propre  compoant 
   function Test(){
     return(
-      <View>
+      <View >
         <Text> Test pour montre le componant Test</Text>
       </View>
     )
@@ -93,17 +93,30 @@ export default function Index() {
 
     <SafeAreaProvider>
 
-     <ScrollView>
-    <View>
+    <ScrollView>
+    <View style={{
+      flex: 1,
+      backgroundColor: "powderblue"}}>
       
-      <Text>{name}</Text>
+  <Text>{name}</Text>
    <Image source={{
      
      uri:"https://i.pinimg.com/736x/03/7b/31/037b3189716898809199b789208ee922.jpg"}}
-     style={{width: 500, height: 500}}  />
+     style={{
+      
+      width: 500, height: 500,
+
+      backgroundColor: "black"
+    
+     }} 
+     
+     />
 
    
-    <Text>   
+    <Text style={{ 
+      flex: 1,
+      backgroundColor: "red"
+    }}>   
       <Test/>
     <H1> Artistic Mouvement </H1>
     </Text>
@@ -125,10 +138,13 @@ export default function Index() {
 {/* <Button title="Profile"/> </Link> */}
     
     </View>
+
     <View style={{
       justifyContent: "center",
       flex: 1,
+      // backgroundColor: "steelblue"
     }}>  
+    
     <TextInput 
     placeholder="Search Bar"
     onChangeText={newtext => setText(newtext)}
@@ -148,27 +164,31 @@ export default function Index() {
       {text.split('').map(word => word && '🍕').join('g')}
     </Text>
     
-    </View>
+    </View >
     
-      <> 
-      <Image source={logo} />
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      <Image source={logo}/>
-      </>
-      <>
+      <View style={{ 
+        flex: 3,
+        backgroundColor: "skyblue",}}> 
+        
+          <Image source={logo} />
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+          <Image source={logo}/>
+      </View>
+      
+      
       <FlatList data={data} renderItem={({item}) => <View>
         <Text>
           {item.title}
@@ -178,9 +198,10 @@ export default function Index() {
           height:100,
         }} />
       </View>}
+      style={{ flex: 1}}
       />
       <Text style={styles.Bigblue}> ARTVANGARDE</Text>
-      </>
+      
       
     </ScrollView>
 
