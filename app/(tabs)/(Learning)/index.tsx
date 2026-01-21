@@ -24,6 +24,7 @@ export default function Index() {
 
   function Cat(props: caProps){
     const [isHungry, setIsHungry] = useState(true);
+    const [text, setText] = useState('');
     return (
       <View>
         <Text >
@@ -72,12 +73,16 @@ export default function Index() {
       pathname: "./[Profile]/third",
       params:  { Profile : 'profile'}
     }}>  */}
-    <Cat name="pOPI"/>
+p    <Cat name="pOPI"/>
 
     {/* <Button title="Profile"/>
     </Link> */}
     
     </View>
+    <View style={{
+      justifyContent: "center",
+      flex: 1,
+    }}></View>
     </ScrollView>
   );
 }
