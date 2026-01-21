@@ -179,6 +179,7 @@ export default function Index() {
         }} />
       </View>}
       />
+      <Text style={styles.Bigblue}> ARTVANGARDE</Text>
       </>
       
     </ScrollView>
@@ -205,6 +206,12 @@ export default function Index() {
     flex : 1,
     width: '30%',
     height: '30%'
+  },
+
+  Bigblue: {
+    color: 'blue',
+    fontWeight: "bold",
+    fontSize: 30, 
   }
  })
 
