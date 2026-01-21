@@ -2,6 +2,7 @@ import { H1 } from "@expo/html-elements";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 
 
@@ -46,6 +47,39 @@ export default function Index() {
   const name = "ArtVanGarde";
   const [text, setText] = useState('');
 
+  const data = [
+    {
+      id:1,
+      title:"Sonya Rapoport",
+      imageUrl:"https://uploads5.wikiart.org/temp/d3ac2d09-98c5-4947-aa4f-574112086a9f.jpg!PinterestLarge.jpg"
+    },
+    {
+      id:1,
+      title:"Wen-Ying Tsai",
+      imageUrl:"https://uploads2.wikiart.org/images/wen-ying-tsai.jpg!PinterestLarge.jpg"
+    },
+    {
+      id:1,
+      title:"Ronald Davis",
+      imageUrl:"https://uploads5.wikiart.org/temp/5063a88a-b87a-42a1-81a8-188eb97fec99.jpg!PinterestLarge.jpg"
+    },
+    {
+      id:1,
+      title:"Vladimir Bonacic",
+      imageUrl:"https://uploads5.wikiart.org/temp/cd7790be-16c0-4b57-b4fc-13dd9d0f9a91.jpg!PinterestLarge.jpg"
+    },
+    {
+      id:1,
+      title:"Piero Gilardi",
+      imageUrl:"https://uploads2.wikiart.org/images/piero-gilardi.jpg!PinterestLarge.jpg"
+    },
+    {
+      id:1,
+      title:"[ a y s h ]",
+      imageUrl:"https://uploads8.wikiart.org/00341/images/ayshia-taskin/ayshia-taskin-paradise-corns-2018-by-ryan-buchanan.jpg!PinterestLarge.jpg"
+    },
+
+  ]
   const logo = {
     uri: 'https://artvantgard.com/white%20full%20logo.svg',
     width: 100,
@@ -55,14 +89,17 @@ export default function Index() {
   
   
   return (
+
+    <SafeAreaProvider>
+
      <ScrollView>
     <View>
       
       <Text>{name}</Text>
    <Image source={{
-    
-  uri:"https://i.pinimg.com/736x/03/7b/31/037b3189716898809199b789208ee922.jpg"}}
-    style={{width: 500, height: 500}}  />
+     
+     uri:"https://i.pinimg.com/736x/03/7b/31/037b3189716898809199b789208ee922.jpg"}}
+     style={{width: 500, height: 500}}  />
 
    
     <Text>   
@@ -80,7 +117,7 @@ export default function Index() {
     {/* <Link href={{ 
       pathname: "./[Profile]/third",
       params:  { Profile : 'profile'}
-    }}>  */}
+      }}>  */}
     <Cat name="pOPI"/>
 
     
@@ -111,7 +148,9 @@ export default function Index() {
     </Text>
     
     </View>
-    <View>
+    
+      <> 
+      <Image source={logo} />
       <Image source={logo}/>
       <Image source={logo}/>
       <Image source={logo}/>
@@ -127,9 +166,12 @@ export default function Index() {
       <Image source={logo}/>
       <Image source={logo}/>
       <Image source={logo}/>
-      <Image source={logo}/>
-    </View>
+      </>
+    
     </ScrollView>
+
+
+      </SafeAreaProvider>
   );
 }
  const styles = StyleSheet.create({
@@ -148,8 +190,8 @@ export default function Index() {
 
   Image: {
     flex : 1,
-    width: '100%',
-    height: '100%'
+    width: '30%',
+    height: '30%'
   }
  })
 
