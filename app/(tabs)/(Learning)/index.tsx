@@ -45,6 +45,13 @@ export default function Index() {
   const PlaceHolder = require("@/assets/images/lol.avif");
   const name = "ArtVanGarde";
   const [text, setText] = useState('');
+
+  const logo = {
+    uri: 'https://artvantgard.com/white%20full%20logo.svg',
+    width: 100,
+    height: 100,
+    flex: 2 
+  }
   
   
   return (
@@ -77,9 +84,7 @@ export default function Index() {
     <Cat name="pOPI"/>
 
     
-
-    {/* <Button title="Profile"/>
-    </Link> */}
+{/* <Button title="Profile"/> </Link> */}
     
     </View>
     <View style={{
@@ -102,9 +107,27 @@ export default function Index() {
       fontSize: 42
     }}>
 
-      {text.split('').map(word => word && '🍕').join('')}
+      {text.split('').map(word => word && '🍕').join('g')}
     </Text>
     
+    </View>
+    <View>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
+      <Image source={logo}/>
     </View>
     </ScrollView>
   );
