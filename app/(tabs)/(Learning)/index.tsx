@@ -190,7 +190,10 @@ export default function Index() {
       
       
       <FlatList data={data} renderItem={({item}) => <View>
-        <Text>
+        <Text style={{ 
+          color: "white",
+          padding: 5,
+        }}>
           {item.title}
         </Text>
         <Image source={{uri: item.imageUrl}} style={{
@@ -198,7 +201,10 @@ export default function Index() {
           height:100,
         }} />
       </View>}
-      style={{ flex: 1}}
+      style={{ 
+        flex: 1,
+        backgroundColor: "black", 
+      }}
       />
       <Text style={styles.Bigblue}> ARTVANGARDE</Text>
       
