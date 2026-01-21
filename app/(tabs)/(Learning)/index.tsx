@@ -43,7 +43,8 @@ export default function Index() {
   }
   const router = useRouter(); 
   const PlaceHolder = require("@/assets/images/lol.avif");
-  const name = "ArtVanGarde"
+  const name = "ArtVanGarde";
+  
   
   
   return (
@@ -73,7 +74,9 @@ export default function Index() {
       pathname: "./[Profile]/third",
       params:  { Profile : 'profile'}
     }}>  */}
-p    <Cat name="pOPI"/>
+    <Cat name="pOPI"/>
+
+    
 
     {/* <Button title="Profile"/>
     </Link> */}
