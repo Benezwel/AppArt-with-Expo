@@ -1,7 +1,7 @@
 import { H1 } from "@expo/html-elements";
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { Button, Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 
 
@@ -44,7 +44,7 @@ export default function Index() {
   const router = useRouter(); 
   const PlaceHolder = require("@/assets/images/lol.avif");
   const name = "ArtVanGarde";
-  
+  const [text, setText] = useState('');
   
   
   return (
@@ -85,7 +85,27 @@ export default function Index() {
     <View style={{
       justifyContent: "center",
       flex: 1,
-    }}></View>
+    }}>  
+    <TextInput 
+    placeholder="Search Bar"
+    onChangeText={newtext => setText(newtext)}
+    defaultValue={text}
+    style={{
+      height: 40,
+      padding: 5,
+      marginHorizontal: 8,
+      borderWidth: 1
+    }}
+    />
+    <Text style={{
+      padding: 10,
+      fontSize: 42
+    }}>
+
+      {text.split('').map(word => word && '🍕').join('')}
+    </Text>
+    
+    </View>
     </ScrollView>
   );
 }
