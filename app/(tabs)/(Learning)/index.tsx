@@ -1,7 +1,8 @@
 import { H1 } from "@expo/html-elements";
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { Button, Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, FlatList, Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+// import { FlatList } from "react-native-reanimated/lib/typescript/Animated";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 
@@ -54,27 +55,27 @@ export default function Index() {
       imageUrl:"https://uploads5.wikiart.org/temp/d3ac2d09-98c5-4947-aa4f-574112086a9f.jpg!PinterestLarge.jpg"
     },
     {
-      id:1,
+      id:2,
       title:"Wen-Ying Tsai",
       imageUrl:"https://uploads2.wikiart.org/images/wen-ying-tsai.jpg!PinterestLarge.jpg"
     },
     {
-      id:1,
+      id:3,
       title:"Ronald Davis",
       imageUrl:"https://uploads5.wikiart.org/temp/5063a88a-b87a-42a1-81a8-188eb97fec99.jpg!PinterestLarge.jpg"
     },
     {
-      id:1,
+      id:4,
       title:"Vladimir Bonacic",
       imageUrl:"https://uploads5.wikiart.org/temp/cd7790be-16c0-4b57-b4fc-13dd9d0f9a91.jpg!PinterestLarge.jpg"
     },
     {
-      id:1,
+      id:5,
       title:"Piero Gilardi",
       imageUrl:"https://uploads2.wikiart.org/images/piero-gilardi.jpg!PinterestLarge.jpg"
     },
     {
-      id:1,
+      id:6,
       title:"[ a y s h ]",
       imageUrl:"https://uploads8.wikiart.org/00341/images/ayshia-taskin/ayshia-taskin-paradise-corns-2018-by-ryan-buchanan.jpg!PinterestLarge.jpg"
     },
@@ -167,7 +168,19 @@ export default function Index() {
       <Image source={logo}/>
       <Image source={logo}/>
       </>
-    
+      <>
+      <FlatList data={data} renderItem={({item}) => <View>
+        <Text>
+          {item.title}
+        </Text>
+        <Image source={{uri: item.imageUrl}} style={{
+          width: 100,
+          height:100,
+        }} />
+      </View>}
+      />
+      </>
+      
     </ScrollView>
 
 
