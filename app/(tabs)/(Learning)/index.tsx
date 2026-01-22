@@ -20,7 +20,7 @@ export default function Index() {
         flex: 1,
 
       }} >
-        <Text> Test pour montre le componant Test</Text>
+        <Text style={{ flex: 1}}> Test pour montre le componant Test</Text>
       </View>
     )
   };
@@ -34,10 +34,10 @@ export default function Index() {
     const [isHungry, setIsHungry] = useState(true);
     const [text, setText] = useState('');
     return (
-      <View style={{ flex: 1 ,
-        backgroundColor: "red"
+      <View style={{ 
+        backgroundColor: "red",
       }} >
-        <Text  style={{ flex: 1}}>
+        <Text  style={{ flex: 1, backgroundColor: "orange"}}>
           I'am {props.name}, and I am {isHungry ? "hungry" : "full"}!
         </Text>
         
@@ -123,9 +123,7 @@ export default function Index() {
 
       backgroundColor: "black",
     
-     }} 
-     
-     />
+     }} />
 
    
     <Text style={{ 
@@ -143,6 +141,13 @@ export default function Index() {
     }}> Try to learn</Text>
 
   
+
+    </View> 
+    {/* end Of the first View Container */}
+
+  
+
+
     <Cat name="Mama"/>
     
     {/* <Link href={{ 
@@ -154,13 +159,13 @@ export default function Index() {
     
 {/* <Button title="Profile"/> </Link> */}
     
-    </View> 
-    {/* end Of the first View Container */}
 
 
     {/* Search Bar */}
-   
-    
+  
+
+    <View style={{ flex: 1}}> 
+
     <TextInput 
     placeholder="Search Bar"
     onChangeText={newtext => setText(newtext)}
@@ -170,23 +175,21 @@ export default function Index() {
       padding: 5,
       marginHorizontal: 8,
       borderWidth: 1,
-      flex:1
     }}
     />
     <Text style={{
       padding: 10,
       fontSize: 42,
-      flex: 1
     }}>
 
       {text.split('').map(word => word && '🍕').join('g')}
     </Text>
     
+      </View>
     
       <View style={{ 
         
-        backgroundColor: "skyblue",
-        flex: 1}}> 
+        backgroundColor: "skyblue"}}> 
         
           <Image source={logo} />
           <Image source={logo}/>
@@ -223,7 +226,7 @@ export default function Index() {
         }} />
       </View>}
       style={{ 
-        flex: 1,
+        flex: 1, 
         backgroundColor: "black", 
       }}
       />
