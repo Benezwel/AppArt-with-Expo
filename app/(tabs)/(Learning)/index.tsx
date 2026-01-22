@@ -107,20 +107,20 @@ export default function Index() {
         label="FLEXDIRECTION UNDERSTANDING"
         values={['column','row','column-reverse','row-reverse']}
         selectedValue={flexDirection}
-        setSelectedValue={setflexdirection}
-      >
+        setSelectedValue={setflexdirection}>
         <View style={[styles.box, {backgroundColor:"powderblue"}]}/>
         <View style={[styles.box, {backgroundColor:"skyblue"}]}/>
         <View style={[styles.box, {backgroundColor:"steelblue"}]}/>
 
       </PreviewLayout>
-    )
-  }
+    );
+  };
+
   type PreviewLayoutProps = PropsWithChildren<{
     label: string;
     values: string[];
     selectedValue: string;
-    setSelectedValue: (value: string) => (void)
+    setSelectedValue: (value: string) => void
   }>;
 
   function PreviewLayout ({ label,
@@ -312,9 +312,11 @@ export default function Index() {
       
 
 
+      
+      
+      
 
-
-
+      <FlexDirectionBasic/> 
 
       
     </ScrollView>
@@ -337,7 +339,7 @@ export default function Index() {
  const styles = StyleSheet.create({
   container: {
     flex: 1 , 
-    backgroundColor:  '#382B1B',
+    backgroundColor:  'aliceblue',
     alignItems: "center",
     // alignItems: 'center',
     // justifyContent: 'center', 
@@ -379,7 +381,9 @@ export default function Index() {
   },
   button: {
     paddingHorizontal: 8,
-      paddingVertical: 6
+      paddingVertical: 6,
+      borderRadius: 4,
+      backgroundColor: "oldlace",
   },
 
   selected: {
@@ -390,6 +394,7 @@ export default function Index() {
     fontSize: 12,
     fontWeight: '500',
     color: "corail",
+
   },
   selectedLabel: {
     color: "white"
