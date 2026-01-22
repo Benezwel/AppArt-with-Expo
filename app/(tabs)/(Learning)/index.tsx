@@ -159,11 +159,7 @@ export default function Index() {
 
 
     {/* Search Bar */}
-    <View style={{
-      justifyContent: "center",
-      flex: 1,
-      // backgroundColor: "steelblue"
-    }}>  
+   
     
     <TextInput 
     placeholder="Search Bar"
@@ -174,25 +170,23 @@ export default function Index() {
       padding: 5,
       marginHorizontal: 8,
       borderWidth: 1,
-      flex: 1,
+      flex:1
     }}
     />
     <Text style={{
       padding: 10,
       fontSize: 42,
-      flex: 1,
+      flex: 1
     }}>
 
       {text.split('').map(word => word && '🍕').join('g')}
     </Text>
     
-    </View >
     
       <View style={{ 
         
         backgroundColor: "skyblue",
-        flex: 1,
-        justifyContent: "center"}}> 
+        flex: 1}}> 
         
           <Image source={logo} />
           <Image source={logo}/>
@@ -214,7 +208,7 @@ export default function Index() {
       
       
       <FlatList data={data} renderItem={({item}) => 
-        <View>
+        <View style={{ flex: 1}}>
         <Text style={{ 
           color: "white",
           padding: 5,
@@ -225,6 +219,7 @@ export default function Index() {
         <Image source={{uri: item.imageUrl}} style={{
           width: 100,
           height:100,
+        
         }} />
       </View>}
       style={{ 
@@ -234,7 +229,7 @@ export default function Index() {
       />
       
       
-      <Text style={[styles.Bigblue, styles.container]} > ARTVANGARDE</Text>
+      <Text style={[styles.Bigblue]} > ARTVANGARDE</Text>
       
       
     </ScrollView>
