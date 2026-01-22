@@ -13,7 +13,13 @@ export default function Index() {
   // on peut creer ses propre  compoant 
   function Test(){
     return(
-      <View >
+      <View style={{  justifyContent: "center",
+        marginHorizontal: 8,
+        padding: 10,
+        backgroundColor: "orange",
+        flex: 1,
+
+      }} >
         <Text> Test pour montre le componant Test</Text>
       </View>
     )
@@ -28,12 +34,16 @@ export default function Index() {
     const [isHungry, setIsHungry] = useState(true);
     const [text, setText] = useState('');
     return (
-      <View>
-        <Text >
+      <View style={{ flex: 1 ,
+        backgroundColor: "red"
+      }} >
+        <Text  style={{ flex: 1}}>
           I'am {props.name}, and I am {isHungry ? "hungry" : "full"}!
         </Text>
         
         <Button
+        
+        
         onPress={() => {
           setIsHungry(false);
         }}
@@ -91,7 +101,7 @@ export default function Index() {
   
   return (
 
-    <SafeAreaProvider>
+    <SafeAreaProvider style={{ flex: 1}}>
 
     <ScrollView style={{ flex: 1}}>
 
@@ -100,7 +110,7 @@ export default function Index() {
       flex: 1,
       backgroundColor: "powderblue"}}>
       
-  <Text>{name}</Text>
+  <Text style={{ flex: 1}}>{name}</Text>
    
    <Image source={{
      
@@ -109,7 +119,8 @@ export default function Index() {
       
       width: 500, height: 500,
 
-      backgroundColor: "black"
+      backgroundColor: "black",
+      flex: 1
     
      }} 
      
@@ -142,7 +153,8 @@ export default function Index() {
     
 {/* <Button title="Profile"/> </Link> */}
     
-    </View>
+    </View> 
+    {/* end Of the first View Container */}
 
 
     {/* Search Bar */}
@@ -161,12 +173,13 @@ export default function Index() {
       padding: 5,
       marginHorizontal: 8,
       borderWidth: 1,
-      flex: 1
+      flex: 1,
     }}
     />
     <Text style={{
       padding: 10,
-      fontSize: 42
+      fontSize: 42,
+      flex: 1,
     }}>
 
       {text.split('').map(word => word && '🍕').join('g')}
@@ -175,8 +188,10 @@ export default function Index() {
     </View >
     
       <View style={{ 
+        
+        backgroundColor: "skyblue",
         flex: 1,
-        backgroundColor: "skyblue",}}> 
+        justifyContent: "center"}}> 
         
           <Image source={logo} />
           <Image source={logo}/>
@@ -197,10 +212,12 @@ export default function Index() {
       </View>
       
       
-      <FlatList data={data} renderItem={({item}) => <View>
+      <FlatList data={data} renderItem={({item}) => 
+        <View>
         <Text style={{ 
           color: "white",
           padding: 5,
+          flex: 1,
         }}>
           {item.title}
         </Text>
@@ -214,7 +231,9 @@ export default function Index() {
         backgroundColor: "black", 
       }}
       />
-      <Text style={styles.Bigblue}> ARTVANGARDE</Text>
+      
+      
+      <Text style={[styles.Bigblue, styles.container]} > ARTVANGARDE</Text>
       
       
     </ScrollView>
@@ -223,6 +242,17 @@ export default function Index() {
       </SafeAreaProvider>
   );
 }
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+
+
+// StyleSheet 
  const styles = StyleSheet.create({
   container: {
     flex: 1 , 
