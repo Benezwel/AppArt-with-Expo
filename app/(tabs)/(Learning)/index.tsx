@@ -117,22 +117,31 @@ export default function Index() {
         <View style={{padding: 10, flex: 1}}> 
         {/*  Parent container(flex) */}
         <Text style={styles.label}>{label}</Text>
+
         <View style={styles.row}>
           {values.map(value => (
-            <TouchableOpacity key={value} onPress={() =>  setSelectedValue(value)}
-            style={[styles.button, selectedValue === value && styles.selected]}/>
-
-          ))}
-          <Text style={[
-            styles.buttonlabel,
-
-          ]}>
+            <TouchableOpacity 
+            key={value} 
+            onPress={() =>  setSelectedValue(value)}
+            style={[styles.button, selectedValue === value && 
+              styles.selected]}> 
+              
+            
+            <Text style={[
+              styles.buttonlabel,
+              selectedValue === value && styles.selectedLabel
+              
+            ]}>
+              {value}
 
 
           </Text>
+              </TouchableOpacity>
+          ))}
+            
         </View>
-
-
+          {/* fin du 2eme flex */}
+        <View style={[styles.container, {[label]: selectedValue}]}> {children}</View>
         </View>
       )
    
@@ -339,7 +348,8 @@ export default function Index() {
   AvantgardeFont: {
     color: "black",
     fontWeight: "bold", 
-    fontSize: 50
+    fontSize: 50,
+    textAlign: "center"
 
   },
   label: {
@@ -365,6 +375,9 @@ export default function Index() {
     fontSize: 12,
     fontWeight: '500',
     color: "corail",
+  },
+  selectedLabel: {
+    color: "white"
   }
  })
 
