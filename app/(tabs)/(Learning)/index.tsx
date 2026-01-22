@@ -103,7 +103,9 @@ export default function Index() {
 
     <SafeAreaProvider style={{ flex: 1}}>
 
-    <ScrollView style={{ flex: 1}}>
+    <ScrollView style={{ flex: 1,
+      backgroundColor: "#B899E1"
+    }}>
 
       {/* image Avant Garde */}
     <View style={{
@@ -117,10 +119,9 @@ export default function Index() {
      uri:"https://i.pinimg.com/736x/03/7b/31/037b3189716898809199b789208ee922.jpg"}}
      style={{
       
-      width: 500, height: 500,
+      width: 400, height: 400,
 
       backgroundColor: "black",
-      flex: 1
     
      }} 
      
