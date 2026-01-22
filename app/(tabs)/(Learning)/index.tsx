@@ -1,7 +1,7 @@
 import { H1 } from "@expo/html-elements";
 import { useRouter } from "expo-router";
-import { useState } from "react";
-import { Button, FlatList, Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { PropsWithChildren, useState } from "react";
+import { Button, FlatList, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 // import { FlatList } from "react-native-reanimated/lib/typescript/Animated";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -97,7 +97,47 @@ export default function Index() {
     height: 100,
     flex: 1,
   }
-  
+  //////////////////////////////  
+  /// Learning Layout Grid & FlexBox and typeScript/////
+  /////////////////////////////
+
+  type PreviewLayoutProps = PropsWithChildren<{
+    label: string;
+    values: string[];
+    selectedValue: string;
+    setSelectedValue: (value: string) => (void)
+  }>;
+
+  function PreviewLayout ({ label,
+    children,
+    values, 
+    selectedValue, 
+    setSelectedValue,} : PreviewLayoutProps){
+      return (
+        <View style={{padding: 10, flex: 1}}> 
+        {/*  Parent container(flex) */}
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.row}>
+          {values.map(value => (
+            <TouchableOpacity key={value} onPress={() =>  setSelectedValue(value)}
+            style={[styles.button, selectedValue === value && styles.selected]}/>
+
+          ))}
+          <Text style={[
+            styles.buttonlabel,
+
+          ]}>
+
+
+          </Text>
+        </View>
+
+
+        </View>
+      )
+   
+
+  }
   
   return (
 
@@ -246,6 +286,13 @@ export default function Index() {
       <Text style={[styles.Bigblue ]} > ARTVANGARDE</Text>
       
       
+
+
+
+
+
+
+      
     </ScrollView>
 
 
@@ -294,6 +341,30 @@ export default function Index() {
     fontWeight: "bold", 
     fontSize: 50
 
+  },
+  label: {
+    textAlign: "center",
+    marginBottom: 10,
+    fontSize: 24,
+  },
+
+  row: {
+    flexDirection: "row",
+    flexWrap: "wrap"
+  },
+  button: {
+    paddingHorizontal: 8,
+      paddingVertical: 6
+  },
+
+  selected: {
+    backgroundColor: "coral",
+    borderWidth: 0,
+  },
+  buttonlabel: {
+    fontSize: 12,
+    fontWeight: '500',
+    color: "corail",
   }
  })
 
