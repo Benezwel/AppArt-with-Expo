@@ -95,36 +95,46 @@ export default function Index() {
     uri: 'https://artvantgard.com/white%20full%20logo.svg',
     width: 100,
     height: 100,
-    flex: 2 
+    flex: 1,
   }
   
   
   return (
 
-    <SafeAreaProvider style={{ flex: 1}}>
+    <SafeAreaProvider style={{ flex: 1,
+      // alignItems: "center",
+    }}>
 
     <ScrollView style={{ flex: 1,
-      backgroundColor: "#B899E1"
+      backgroundColor: "#B899E1",
+      padding: 20,  
     }}>
 
       {/* image Avant Garde */}
     <View style={{
       flex: 1,
-      backgroundColor: "powderblue"}}>
+      backgroundColor: "powderblue",
+      justifyContent: "center"}}>
       
-  <Text style={{ flex: 1}}>{name}</Text>
+  <Text style={[styles.AvantgardeFont , { flex: 1}]}>{name}</Text>
    
+   <View style={{
+     alignItems: "center"
+   }}> 
+
    <Image source={{
      
      uri:"https://i.pinimg.com/736x/03/7b/31/037b3189716898809199b789208ee922.jpg"}}
      style={{
-      
-      width: 400, height: 400,
+       
+       width: 300, height: 300,
+       borderColor: "red", 
+       borderWidth: 1,
+       resizeMode: "contain",
 
-      backgroundColor: "black",
-    
-     }} />
+      }} />
 
+      </View>
    
     <Text style={{ 
       flex: 1,
@@ -164,15 +174,15 @@ export default function Index() {
     {/* Search Bar */}
   
 
-    <View style={{ flex: 1}}> 
+    <View style={{backgroundColor: "white"}}> 
 
     <TextInput 
     placeholder="Search Bar"
     onChangeText={newtext => setText(newtext)}
     defaultValue={text}
     style={{
-      height: 5,
-      padding: 5,
+      height: 2,
+      padding: 10,
       marginHorizontal: 8,
       borderWidth: 1,
     }}
@@ -189,29 +199,31 @@ export default function Index() {
     
       <View style={{ 
         
-        backgroundColor: "skyblue"}}> 
+        backgroundColor: "skyblue",
+        alignItems: "center"}}> 
         
-          <Image source={logo} />
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
-          <Image source={logo}/>
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+          <Image source={logo} style={{ resizeMode: "contain"}} />
+       
       </View>
       
       
       <FlatList data={data} renderItem={({item}) => 
-        <View style={{ flex: 1}}>
+        <View style={{ alignItems: "center"}}>
         <Text style={{ 
           color: "white",
           padding: 5,
@@ -225,14 +237,13 @@ export default function Index() {
         
         }} />
       </View>}
-      style={{ 
-        flex: 1, 
+      style={{ flex: 1,
         backgroundColor: "black", 
       }}
       />
       
       
-      <Text style={[styles.Bigblue]} > ARTVANGARDE</Text>
+      <Text style={[styles.Bigblue ]} > ARTVANGARDE</Text>
       
       
     </ScrollView>
@@ -256,6 +267,7 @@ export default function Index() {
   container: {
     flex: 1 , 
     backgroundColor:  '#382B1B',
+    alignItems: "center",
     // alignItems: 'center',
     // justifyContent: 'center', 
   },
@@ -276,6 +288,12 @@ export default function Index() {
     color: 'blue',
     fontWeight: "bold",
     fontSize: 30, 
+  }, 
+  AvantgardeFont: {
+    color: "black",
+    fontWeight: "bold", 
+    fontSize: 50
+
   }
  })
 
