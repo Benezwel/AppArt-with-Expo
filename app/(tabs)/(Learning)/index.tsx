@@ -100,7 +100,22 @@ export default function Index() {
   //////////////////////////////  
   /// Learning Layout Grid & FlexBox and typeScript/////
   /////////////////////////////
+  function FlexDirectionBasic(){
+    const  [flexDirection, setflexdirection] = useState('column');
+    return (
+      <PreviewLayout
+        label="FLEXDIRECTION UNDERSTANDING"
+        values={['column','row','column-reverse','row-reverse']}
+        selectedValue={flexDirection}
+        setSelectedValue={setflexdirection}
+      >
+        <View style={[styles.box, {backgroundColor:"powderblue"}]}/>
+        <View style={[styles.box, {backgroundColor:"skyblue"}]}/>
+        <View style={[styles.box, {backgroundColor:"steelblue"}]}/>
 
+      </PreviewLayout>
+    )
+  }
   type PreviewLayoutProps = PropsWithChildren<{
     label: string;
     values: string[];
@@ -378,6 +393,10 @@ export default function Index() {
   },
   selectedLabel: {
     color: "white"
+  },
+  box: {
+    width: 50,
+    height: 50,
   }
  })
 
