@@ -93,12 +93,15 @@ export default function Index() {
 
     <SafeAreaProvider>
 
-    <ScrollView>
+    <ScrollView style={{ flex: 1}}>
+
+      {/* image Avant Garde */}
     <View style={{
       flex: 1,
       backgroundColor: "powderblue"}}>
       
   <Text>{name}</Text>
+   
    <Image source={{
      
      uri:"https://i.pinimg.com/736x/03/7b/31/037b3189716898809199b789208ee922.jpg"}}
@@ -115,14 +118,16 @@ export default function Index() {
    
     <Text style={{ 
       flex: 1,
-      backgroundColor: "red"
+      backgroundColor: "red",
+      justifyContent: "center"
     }}>   
-      <Test/>
     <H1> Artistic Mouvement </H1>
     </Text>
+      <Test />
    
     <Text style={{
-      alignItems: "center", 
+      alignItems: "center",
+      justifyContent: "center" 
     }}> Try to learn</Text>
 
   
@@ -139,6 +144,8 @@ export default function Index() {
     
     </View>
 
+
+    {/* Search Bar */}
     <View style={{
       justifyContent: "center",
       flex: 1,
@@ -150,10 +157,11 @@ export default function Index() {
     onChangeText={newtext => setText(newtext)}
     defaultValue={text}
     style={{
-      height: 40,
+      height: 5,
       padding: 5,
       marginHorizontal: 8,
-      borderWidth: 1
+      borderWidth: 1,
+      flex: 1
     }}
     />
     <Text style={{
@@ -167,7 +175,7 @@ export default function Index() {
     </View >
     
       <View style={{ 
-        flex: 3,
+        flex: 1,
         backgroundColor: "skyblue",}}> 
         
           <Image source={logo} />
